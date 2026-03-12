@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feeling Sick</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-container clickable-logo" onclick="goHome()">
+    <img src="logo.png" alt="Logo">
+    <span class="site-title">Hostel Food Management System</span>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <h2>🤒 Feeling Sick?</h2>
+
+  <!-- SICK REQUEST CARD -->
+  <div class="section-card">
+
+  <h3>Sick Food Request</h3>
+
+  <label>Student Name</label>
+  <input id="sickStudentName" placeholder="Your Name">
+
+  <label>Hostel Name</label>
+  <input id="sickHostel" placeholder="Hostel Name">
+
+  <label>Room Number</label>
+  <input id="sickRoom" placeholder="Room Number">
+
+  <label>School ID</label>
+  <input type="file" id="schoolId" accept="image/*">
+
+  <label>Symptoms</label>
+  <input id="symptoms" placeholder="Describe your symptoms">
+
+  <label>Doctor's Description</label>
+  <textarea id="doctorNote"></textarea>
+
+  <label>Food Type</label>
+  <select id="foodType">
+    <option>Soft Food</option>
+    <option>Liquid Diet</option>
+    <option>Normal Food</option>
+  </select>
+
+  <br><br>
+  <button class="btn-primary big-btn" onclick="sendSickRequest()">
+    Submit Sick Request
+  </button>
+
+</div>
+
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

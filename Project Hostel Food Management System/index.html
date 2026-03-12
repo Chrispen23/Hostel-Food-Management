@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hostel Food Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER BAR -->
+<header class="site-header">
+  <div class="logo-container clickable-logo" onclick="goHome()">
+    <img src="logo.png" alt="Logo">
+    <span class="site-title">Hostel Food Management</span>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <div class="section-card">
+    <h2>Welcome</h2>
+    <p>
+      Manage hostel meals, student feedback, and sick food requests efficiently
+      through a simple and organized system.
+    </p>
+
+    <div style="margin-top: 30px;">
+      <button class="btn-primary" onclick="navigatePage('student.html')">
+        Student Dashboard
+      </button>
+
+      <br><br>
+
+      <button class="btn-primary" onclick="navigatePage('admin.html')">
+        Admin Dashboard
+      </button>
+
+      <br><br>
+
+      <button class="btn-primary" onclick="navigatePage('staff.html')">
+  Staff Dashboard
+</button>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-container clickable-logo" onclick="goHome()">
+    <img src="logo.png" alt="Logo">
+    <span class="site-title">Hostel Food Management System</span>
+  </div>
+</header>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+  <h2>Student Dashboard</h2>
+
+  <!-- TODAY'S MEAL -->
+  <div class="section-card">
+    <h3>Today's Meal</h3>
+    <div id="mealDisplay"></div>
+  </div>
+
+  <!-- FEEDBACK STATUS -->
+  <div id="feedbackStatus" class="section-card status-box">
+    <!-- Status injected by JS -->
+  </div>
+
+  <!-- FEEDBACK FORM -->
+  <div id="feedbackSection" class="section-card">
+    <h3>Rate & Feedback</h3>
+
+    <label>Student Name</label>
+    <input id="studentName" placeholder="Your Name">
+
+    <label>Hostel</label>
+    <select id="hostel">
+      <option>Albert Einstein</option>
+      <option>Marie Curie</option>
+      <option>Tagore Bhawan</option>
+    </select>
+
+    <label>Rating</label>
+    <select id="rating">
+      <option value="5">5 ⭐</option>
+      <option value="4">4 ⭐</option>
+      <option value="3">3 ⭐</option>
+      <option value="2">2 ⭐</option>
+      <option value="1">1 ⭐</option>
+    </select>
+
+    <label>Feedback</label>
+    <textarea id="comment" placeholder="Write your feedback"></textarea>
+
+    <br><br>
+    <button id="feedbackBtn" class="btn-primary" onclick="submitFeedback()">
+      Submit Feedback
+    </button>
+  </div>
+
+  <!-- SICK REQUEST STATUS -->
+  <div class="section-card">
+    <h3>Your Sick Request Status</h3>
+    <div id="studentRequestStatus"></div>
+  </div>
+
+  <!-- SICK FOOD BUTTON -->
+  <div class="section-card" style="text-align:center;">
+    <button class="btn-primary big-btn" onclick="location.href='sick.html'">
+      🤒 Feeling Sick? Request Food
+    </button>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

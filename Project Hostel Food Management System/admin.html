@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-container clickable-logo" onclick="goHome()">
+    <img src="logo.png" alt="Logo">
+    <span class="site-title">Hostel Food Management System</span>
+  </div>
+</header>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+  <h1>Admin Dashboard</h1>
+
+  <!-- UPLOAD MEAL -->
+  <div class="section-card">
+    <h3>Upload Today's Meal</h3>
+
+    <label>Meal Description</label>
+    <input id="mealName" placeholder="Meal Description (e.g. Pasta)">
+
+    <label>Meal Image</label>
+    <input type="file" id="mealImage" accept="image/*">
+
+    <br><br>
+    <button class="btn-primary" onclick="addMeal()">
+      Upload Meal
+    </button>
+
+    <div id="mealPreview" style="margin-top:20px;"></div>
+  </div>
+
+  <!-- SICK REQUESTS -->
+  <div class="section-card">
+    <h3>Sick Food Requests</h3>
+    <div id="adminRequests">No sick requests yet.</div>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div class="section-card">
+    <h3>Student Feedback</h3>
+    <select id="mealFilter" onchange="loadFeedbackByMeal()">
+  <option value="">-- Select Meal --</option>
+</select>
+
+<div id="filteredFeedback"></div>
+
+    <div id="feedbackList">No feedback submitted yet.</div>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
